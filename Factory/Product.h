@@ -1,13 +1,13 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
-// 商品的抽象定义
+// 被构造者的抽象定义
 class IProduct {
 public:
     IProduct() {}
     virtual ~IProduct() {};
 
-    // 商品自身完成的某项功能
+    // 被构造者自身完成的某项功能
     virtual void operation() = 0;
 };
 
