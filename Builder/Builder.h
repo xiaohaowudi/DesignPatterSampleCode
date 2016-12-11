@@ -4,46 +4,88 @@
 #include <iostream>
 using namespace std;
 
-// ¹¹ÔìÕßÀà³éÏó½Ó¿ÚÀà£¬¹æ¶¨¹¹ÔìĞèÒªÄÄĞ©²½Öè
+
+// äº§å“çš„æŠ½è±¡ç±»
+class IProduct {
+public:
+	IProduct() : a(0), b(0.0) { }
+	virtual ~IProduct() { }
+
+	// äº§å“åŠŸèƒ½çš„æŠ½è±¡æ¥å£
+	virtual void operation() = 0;
+	virtual void set_a(int a) = 0;
+	virtual void set_b(double b) = 0;
+
+protected:
+	// å‡å®šäº§å“å…·æœ‰ä¸¤æ®µå±æ€§,éœ€è¦åˆ†æˆä¸¤æ®µå…ˆåè¿›è¡Œæ„å»º
+	int a;
+	double b;
+};
+
+// äº§å“å®ç°ç±»1
+class CProduct1 : public IProduct {
+public:
+	CProduct1() { }
+	~CProduct1() { }
+	void operation();
+	void set_a(int a) { this->a = a; }
+	void set_b(double b) { this->b = b; }
+};
+
+// äº§å“å®ç°ç±»1
+class CProduct2 : public IProduct {
+public:
+	CProduct2() { }
+	~CProduct2() { }
+	void operation();
+	void set_a(int a) { this->a = a; }
+	void set_b(double b) { this->b = b; }
+};
+
+
+// æ„é€ è€…ç±»æŠ½è±¡æ¥å£ç±»ï¼Œè§„å®šæ„é€ éœ€è¦å“ªäº›æ­¥éª¤
 class IBuilder{
 public:
 	IBuilder() {}
 	virtual ~IBuilder() {}
 	
-	// ¹æ¶¨¹¹½¨·ÖÎªAºÍBÁ½¸ö²½Öè
-	virtual void build_part_a() = 0;
-	virtual void build_part_b() = 0;
+	// è§„å®šæ„å»ºåˆ†ä¸ºAå’ŒBä¸¤ä¸ªæ­¥éª¤
+	virtual void build_part_a(IProduct* p_product) = 0;
+	virtual void build_part_b(IProduct* p_product) = 0;
+	virtual IProduct* init_instance() = 0;
 };
 
-// Á½ÖÖbuilderµÄÊµÏÖÀà
+// ä¸¤ç§builderçš„å®ç°ç±»
 class CBuilder1 : public IBuilder {
 public:
 	CBuilder1() { cout << "CBuilder1::CBuilder1" << endl; }
 	~CBuilder1() { cout << "CBuilder1::~CBuilder1" << endl; }
-	void build_part_a();
-	void build_part_b();
+	void build_part_a(IProduct* p_product);
+	void build_part_b(IProduct* p_product);
+	IProduct* init_instance();
 };
 
-// Á½ÖÖbuilderµÄÊµÏÖÀà
+// ä¸¤ç§builderçš„å®ç°ç±»
 class CBuilder2 : public IBuilder {
 public:
 	CBuilder2() { cout << "CBuilder2::CBuilder2" << endl; }
 	~CBuilder2() { cout << "CBuilder2::~CBuilder2" << endl; }
-	void build_part_a();
-	void build_part_b();
+	void build_part_a(IProduct* p_product);
+	void build_part_b(IProduct* p_product);
+	IProduct* init_instance();
 };
 
 
-// ¹æ¶¨Ã¿¸ö¹¹½¨²½ÖèµÄË³Ğò
+// è§„å®šæ¯ä¸ªæ„å»ºæ­¥éª¤çš„é¡ºåº
 class CDirector {
 public:
 	CDirector() : m_builder_ptr(NULL) {}
 	virtual ~CDirector() {}
 
-	// ¹¹½¨º¯Êı£¬µ÷ÓÃIBuilderÑÜÉúÀàÌá¹©µÄ¹¹ÔìÃ¿¸ö²¿·ÖµÄ·½·¨
-	void construct();
+	// æ„å»ºå‡½æ•°ï¼Œè°ƒç”¨IBuilderè¡ç”Ÿç±»æä¾›çš„æ„é€ æ¯ä¸ªéƒ¨åˆ†çš„æ–¹æ³•
+	IProduct* construct();
 
-	// ÉèÖÃbuilderº¯Êı
+	// è®¾ç½®builderå‡½æ•°
 	void set_builder(IBuilder* p_builder);
 
 private:

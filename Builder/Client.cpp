@@ -1,17 +1,24 @@
 #include "Builder.h"
 
 int main(void) {
+	IProduct *p_product = NULL;
 	CDirector* p_director = new CDirector();
 	IBuilder* p_builder1 = new CBuilder1();
 	IBuilder* p_builder2 = new CBuilder2();
 
-	// Ê¹ÓÃµÚÒ»ÖÖ¹¹½¨Õß½øÐÐ¹¹½¨
+	// ä½¿ç”¨ç¬¬ä¸€ç§æž„å»ºè€…è¿›è¡Œæž„å»º
 	p_director->set_builder(p_builder1);
-	p_director->construct();
+	p_product = p_director->construct();
+	p_product->operation();
+	delete p_product;
+	p_product = NULL;
 
-	// Ê¹ÓÃµÚ¶þÖÖ¹¹½¨Õß½øÐÐ¹¹½¨
+	// ä½¿ç”¨ç¬¬äºŒç§æž„å»ºè€…è¿›è¡Œæž„å»º
 	p_director->set_builder(p_builder2);
-	p_director->construct();
+	p_product = p_director->construct();
+	p_product->operation();
+	delete p_product;
+	p_product = NULL;
 
 	delete p_director;
 	delete p_builder1;
