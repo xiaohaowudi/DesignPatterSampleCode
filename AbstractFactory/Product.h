@@ -8,7 +8,7 @@ class IProductA {
 public:
     IProductA() {}
     virtual ~IProductA() {}
-    // A类商品的功能函数
+    // A绫诲晢鍝佺殑鍔熻兘鍑芥暟
     virtual void operation_a() = 0;
 };
 
@@ -16,7 +16,7 @@ class IProductB {
 public:
     IProductB() {}
     virtual ~IProductB() {}
-    // B类商品的功能函数
+    // B绫诲晢鍝佺殑鍔熻兘鍑芥暟
     virtual void operation_b() = 0;
 };
 
