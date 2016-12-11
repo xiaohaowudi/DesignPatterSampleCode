@@ -1,17 +1,17 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
-// 被构造者的抽象定义
+// 琚瀯閫犺�呯殑鎶借薄瀹氫箟
 class IProduct {
 public:
     IProduct() {}
     virtual ~IProduct() {};
 
-    // 被构造者自身完成的某项功能
+    // 琚瀯閫犺�呰嚜韬畬鎴愮殑鏌愰」鍔熻兘
     virtual void operation() = 0;
 };
 
-// 两种商品都继承抽象的商品接口，但是构造的方法不同
+// 涓ょ鍟嗗搧閮界户鎵挎娊璞＄殑鍟嗗搧鎺ュ彛锛屼絾鏄瀯閫犵殑鏂规硶涓嶅悓
 
 class CProduct1 : public IProduct {
 public:

@@ -1,13 +1,13 @@
 #ifndef STRATEGY_H
 #define STRATEGY_H
 
-// ³éÏó²ßÂÔ»ùÀà
+// æŠ½è±¡ç­–ç•¥åŸºç±»
 class IStrategy {
 public:
 	IStrategy() { }
 	virtual ~IStrategy() { }
 
-	// ¾ßÌåËã·¨ÊµÏÖ½Ó¿Ú£¬×ÓÀà½øĞĞÊµÏÖ
+	// å…·ä½“ç®—æ³•å®ç°æ¥å£ï¼Œå­ç±»è¿›è¡Œå®ç°
 	virtual void AlgorithmInterface() = 0;
 };
 
@@ -34,7 +34,7 @@ public:
 
 	~CContext() {}
 
-	// ¶Ô¾ßÌåËã·¨½øĞĞÊµ¼Êµ÷ÓÃµÄº¯Êı£¬ÓÃËã·¨ÊµÏÖÒ»Ì×ÎÈ¶¨²»±äµÄÁ÷³Ì
+	// å¯¹å…·ä½“ç®—æ³•è¿›è¡Œå®é™…è°ƒç”¨çš„å‡½æ•°ï¼Œç”¨ç®—æ³•å®ç°ä¸€å¥—ç¨³å®šä¸å˜çš„æµç¨‹
 	void ContextInterface();
 private:
 	IStrategy* m_strategy_ptr;

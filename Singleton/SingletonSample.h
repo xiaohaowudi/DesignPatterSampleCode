@@ -6,11 +6,11 @@ private:
 	static SingletonSample* m_instance_ptr;
 
 private:
-	// ¹¹Ôìº¯ÊıË½ÓĞ
+	// æ„é€ å‡½æ•°ç§æœ‰
 	SingletonSample();
 public:
 	static SingletonSample* get_instance();
-	// ÀàµÄ¹¦ÄÜº¯Êı
+	// ç±»çš„åŠŸèƒ½å‡½æ•°
 	void operation();
 };
 

@@ -6,7 +6,7 @@ int main(void) {
     IImplementior *p_impl1 = new ConcreteImplementor1();
     IImplementior *p_impl2 = new ConcreteImplementor2();
 
-    // 互相组合功能
+    // 浜掔浉缁勫悎鍔熻兘
     IAbstraction *p_abstract1 = new RefinedAbstraction1(p_impl1);
     IAbstraction *p_abstract2 = new RefinedAbstraction2(p_impl1);
     IAbstraction *p_abstract3 = new RefinedAbstraction1(p_impl2);

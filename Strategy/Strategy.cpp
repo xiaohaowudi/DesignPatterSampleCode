@@ -9,12 +9,12 @@ void CContext::ContextInterface() {
 	}
 }
 
-// 具体类的算法实现函数
+// 鍏蜂綋绫荤殑绠楁硶瀹炵幇鍑芥暟
 void CConcreteStrategy1::AlgorithmInterface() {
 	cout << "CConcreteStrategy1::AlgorithmInterface" << endl;
 }
 
-// 具体类的算法实现函数
+// 鍏蜂綋绫荤殑绠楁硶瀹炵幇鍑芥暟
 void CConcreteStrategy2::AlgorithmInterface() {
 	cout << "CConcreteStrategy2::AlgorithmInterface" << endl;
 }

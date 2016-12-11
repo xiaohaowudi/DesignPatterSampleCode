@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-// 静态成员初始化
+// 闈欐�佹垚鍛樺垵濮嬪寲
 SingletonSample* SingletonSample::m_instance_ptr = NULL;
 
 SingletonSample::SingletonSample() {

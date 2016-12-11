@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-// ³éÏó½Ó¿ÚÊµÏÖÀàµÄÊµÏÖ·½Ê½1
+// æŠ½è±¡æ¥å£å®ç°ç±»çš„å®ç°æ–¹å¼1
 void RefinedAbstraction1::operation() {
     if (m_impl_ptr == NULL) {
         return;
@@ -14,7 +14,7 @@ void RefinedAbstraction1::operation() {
     }
 }
 
-// ³éÏó½Ó¿ÚÊµÏÖÀàµÄÊµÏÖ·½Ê½2, ºÍ RefinedAbstraction1 ²»Ò»Ñù
+// æŠ½è±¡æ¥å£å®ç°ç±»çš„å®ç°æ–¹å¼2, å’Œ RefinedAbstraction1 ä¸ä¸€æ ·
 void RefinedAbstraction2::operation() {
     if (m_impl_ptr == NULL) {
         return;
@@ -25,12 +25,12 @@ void RefinedAbstraction2::operation() {
     }
 }
 
-// IImplementor½Ó¿ÚÊµÏÖÀàµÄÒ»ÖÖÊµÏÖ·½·¨1
+// IImplementoræ¥å£å®ç°ç±»çš„ä¸€ç§å®ç°æ–¹æ³•1
 void ConcreteImplementor1::operation_impl() {
     cout << "ConcreteImplementor1::operation_impl" << endl;
 }
 
-// IImplementor½Ó¿ÚÊµÏÖÀàµÄÒ»ÖÖÊµÏÖ·½·¨2
+// IImplementoræ¥å£å®ç°ç±»çš„ä¸€ç§å®ç°æ–¹æ³•2
 void ConcreteImplementor2::operation_impl() {
     cout << "ConcreteImplementor2::operation_impl" << endl;
 }

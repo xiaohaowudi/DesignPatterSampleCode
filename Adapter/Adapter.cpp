@@ -6,7 +6,7 @@ void Adaptee::special_request() {
 }
 
 void CAdapter::request() {
-	// 适配器使用了被适配的类的功能，实现了符合调用者要求的对外接口
+	// 閫傞厤鍣ㄤ娇鐢ㄤ簡琚�傞厤鐨勭被鐨勫姛鑳斤紝瀹炵幇浜嗙鍚堣皟鐢ㄨ�呰姹傜殑瀵瑰鎺ュ彛
 	m_adaptee_ptr->special_request();
 }
 

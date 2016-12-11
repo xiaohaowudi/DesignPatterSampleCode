@@ -8,21 +8,21 @@ public:
     IFactory() {}
     virtual ~IFactory() {};
 
-    // 抽象的工厂方法，子类实现此方法，用于构造不同的产品对象(工厂方法)
+    // 鎶借薄鐨勫伐鍘傛柟娉曪紝瀛愮被瀹炵幇姝ゆ柟娉曪紝鐢ㄤ簬鏋勯�犱笉鍚岀殑浜у搧瀵硅薄(宸ュ巶鏂规硶)
     virtual IProduct* create_product() = 0;
 
-	// 抽象的析构产品的方法
+	// 鎶借薄鐨勬瀽鏋勪骇鍝佺殑鏂规硶
 	virtual void destroy_product(IProduct *p_product) = 0;
 };
 
-// 两种工厂都实现一样的抽象接口，但是创建不同类型的产品对象
+// 涓ょ宸ュ巶閮藉疄鐜颁竴鏍风殑鎶借薄鎺ュ彛锛屼絾鏄垱寤轰笉鍚岀被鍨嬬殑浜у搧瀵硅薄
 
 class CFactory1 : public IFactory {
 public:
     CFactory1();
     ~CFactory1();
 
-	// 具体工厂方法实现
+	// 鍏蜂綋宸ュ巶鏂规硶瀹炵幇
     IProduct* create_product();
 	void destroy_product(IProduct *p_product);
 };
@@ -32,7 +32,7 @@ public:
     CFactory2();
     ~CFactory2();
 
-	// 具体工厂方法实现
+	// 鍏蜂綋宸ュ巶鏂规硶瀹炵幇
     IProduct* create_product();
 	void destroy_product(IProduct *p_product);
 };

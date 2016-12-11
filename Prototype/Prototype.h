@@ -4,20 +4,20 @@
 #include <iostream>
 using namespace std;
 
-// Ô­ĞÍ³éÏóÀà
+// åŸå‹æŠ½è±¡ç±»
 class IPrototype {
 public:
 	IPrototype() {};
 	virtual ~IPrototype() {};
 
-	// Ô­ĞÍ³éÏóÀàÖĞ¹æ¶¨Ã¿¸ö×ÓÀà±ØĞëÊµÏÖclone½Ó¿Ú
+	// åŸå‹æŠ½è±¡ç±»ä¸­è§„å®šæ¯ä¸ªå­ç±»å¿…é¡»å®ç°cloneæ¥å£
 	virtual IPrototype* clone() = 0;
 
-	// ×ÓÀàÊµÏÖµÄ¾ßÌåµÄ¹¦ÄÜ·½·¨
+	// å­ç±»å®ç°çš„å…·ä½“çš„åŠŸèƒ½æ–¹æ³•
 	virtual void operation() = 0;
 };
 
-// Ô­ĞÍÊµÏÖÀà1
+// åŸå‹å®ç°ç±»1
 class CPrototype1 : public IPrototype {
 private:
 	int item;
@@ -27,7 +27,7 @@ public:
 		cout << "CPrototype1::CPrototype1" << endl;
 	}
 
-	// ¿½±´¹¹Ôìº¯Êı£¬cloneÊ±Ê¹ÓÃ
+	// æ‹·è´æ„é€ å‡½æ•°ï¼Œcloneæ—¶ä½¿ç”¨
 	CPrototype1(const CPrototype1& prototype) {
 		this->item = prototype.item;
 	}
@@ -40,7 +40,7 @@ public:
 	void operation();
 };
 
-// Ô­ĞÍÊµÏÖÀà1
+// åŸå‹å®ç°ç±»1
 class CPrototype2 : public IPrototype {
 private:
 	double item;

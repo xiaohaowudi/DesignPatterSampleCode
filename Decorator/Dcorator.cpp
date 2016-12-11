@@ -2,40 +2,40 @@
 #include <iostream>
 using namespace std;
 
-// Ô­Ê¼ComponentÊµÏÖÀàµÄĞĞÎª·½·¨
+// åŸå§‹Componentå®ç°ç±»çš„è¡Œä¸ºæ–¹æ³•
 void CConcreteComponent::operation() {
 	cout << "CConcreteComponent::operation" << endl;
 }
 
-// ×°ÊÎÕß1ĞĞÎª
+// è£…é¥°è€…1è¡Œä¸º
 void CConcreteDecorator1::operation() {
 	m_component_ptr->operation();
 	add_operation();
 }
 
-// ×°ÊÎÕß1¸½¼ÓĞĞÎª
+// è£…é¥°è€…1é™„åŠ è¡Œä¸º
 void CConcreteDecorator1::add_operation() {
 	cout << "CConcreteDecorator1::add_operation" << endl;
 }
 
-// ×°ÊÎÕß2ĞĞÎª
+// è£…é¥°è€…2è¡Œä¸º
 void CConcreteDecorator2::operation() {
 	m_component_ptr->operation();
 	add_operation();
 }
 
-// ×°ÊÎÕß2¸½¼ÓĞĞÎª
+// è£…é¥°è€…2é™„åŠ è¡Œä¸º
 void CConcreteDecorator2::add_operation() {
 	cout << "CConcreteDecorator2::add_operation" << endl;
 }
 
-// ×°ÊÎÕß3ĞĞÎª
+// è£…é¥°è€…3è¡Œä¸º
 void CConcreteDecorator3::operation() {
 	m_component_ptr->operation();
 	add_operation();
 }
 
-// ×°ÊÎÕß3¸½¼ÓĞĞÎª
+// è£…é¥°è€…3é™„åŠ è¡Œä¸º
 void CConcreteDecorator3::add_operation() {
 	cout << "CConcreteDecorator3::add_operation" << endl;
 }

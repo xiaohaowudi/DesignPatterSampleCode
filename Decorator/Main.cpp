@@ -1,7 +1,7 @@
 #include "Decorator.h"
 
 int main(void) {
-	// Ò»²ãÒ»²ãµÄ×°ÊÎºÍ¹¦ÄÜ×éºÏ£¬·ÀÖ¹Àà±¬Õ¨
+	// ä¸€å±‚ä¸€å±‚çš„è£…é¥°å’ŒåŠŸèƒ½ç»„åˆï¼Œé˜²æ­¢ç±»çˆ†ç‚¸
 	IComponent *p_component = new CConcreteComponent();
 	IComponent *p_component1 = new CConcreteDecorator1(p_component);
 	IComponent *p_component2 = new CConcreteDecorator2(p_component1);

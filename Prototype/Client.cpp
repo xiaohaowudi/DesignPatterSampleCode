@@ -4,7 +4,7 @@ int main(void) {
 	IPrototype *p_prototype1 = new CPrototype1();
 	IPrototype *p_prototype2 = new CPrototype2();
 
-	// Í¨¹ýÔ­ÐÍµÄclone·½·¨»ñÈ¡ÊµÀý£¬¶ø²»ÊÇÊ¹ÓÃnewÔËËã·û
+	// é€šè¿‡åŽŸåž‹çš„cloneæ–¹æ³•èŽ·å–å®žä¾‹ï¼Œè€Œä¸æ˜¯ä½¿ç”¨newè¿ç®—ç¬¦
 	IPrototype* p_prototype_clone1 = p_prototype1->clone();
 	IPrototype* p_prototype_clone2 = p_prototype2->clone();
 

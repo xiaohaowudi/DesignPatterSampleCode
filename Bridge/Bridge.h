@@ -7,7 +7,7 @@ class IImplementior {
 public:
     IImplementior() { }
     ~IImplementior() { }
-    // ImplementorÀàµÄĞé½Ó¿Ú£¬ÓÉ×ÓÀà½øĞĞÊµÏÖ£¬Ìá¹©¸øIAbstractionµÄÊµÏÖÀà½øĞĞµ÷ÓÃ
+    // Implementorç±»çš„è™šæ¥å£ï¼Œç”±å­ç±»è¿›è¡Œå®ç°ï¼Œæä¾›ç»™IAbstractionçš„å®ç°ç±»è¿›è¡Œè°ƒç”¨
     virtual void operation_impl() = 0;
 };
 
@@ -15,13 +15,13 @@ class IAbstraction {
 public:
     IAbstraction(IImplementior *p_impl) : m_impl_ptr(p_impl) { }
     virtual ~IAbstraction() { }
-    // ¹¦ÄÜº¯Êı£¬×ÓÀà½øĞĞÊµÏÖ
+    // åŠŸèƒ½å‡½æ•°ï¼Œå­ç±»è¿›è¡Œå®ç°
     virtual void operation() = 0;
 protected:
     IImplementior *m_impl_ptr;
 };
 
-// ³éÏóÀàµÄÊµÏÖÀà1
+// æŠ½è±¡ç±»çš„å®ç°ç±»1
 class RefinedAbstraction1 : public IAbstraction {
 public:
     RefinedAbstraction1(IImplementior *p_impl) : IAbstraction(p_impl) { }
@@ -31,7 +31,7 @@ public:
 
 
 
-// ³éÏóÀàµÄÊµÏÖÀà2
+// æŠ½è±¡ç±»çš„å®ç°ç±»2
 class RefinedAbstraction2 : public IAbstraction {
 public:
     RefinedAbstraction2(IImplementior *p_impl) : IAbstraction(p_impl) { }
@@ -39,7 +39,7 @@ public:
     void operation();
 };
 
-// ImplementorµÄÊµÏÖÀà1
+// Implementorçš„å®ç°ç±»1
 class ConcreteImplementor1 : public IImplementior {
 public:
     ConcreteImplementor1() { }
@@ -47,7 +47,7 @@ public:
     void operation_impl();
 };
 
-// ImplementorµÄÊµÏÖÀà2
+// Implementorçš„å®ç°ç±»2
 class ConcreteImplementor2 : public IImplementior {
 public:
     ConcreteImplementor2() { }

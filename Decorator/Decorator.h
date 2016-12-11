@@ -1,17 +1,17 @@
 #ifndef DECORATOR_H
 #define DECORATOR_H
 
-// ╠╩в╟йнуъ╣дЁИоС╩ЫюЮ
+// Х╒╚Хё┘И╔╟Х─┘Г └Ф┼╫Х╠║Е÷╨Г╠╩
 class IComponent {
 public:
 	IComponent() { }
 	virtual ~IComponent() { }
 
-	// ╠╩в╟йнуъ╣дЁИоСппн╙╫с©з
+	// Х╒╚Хё┘И╔╟Х─┘Г └Ф┼╫Х╠║Х║▄Д╦╨Ф▌╔Е▐ё
 	virtual void operation() = 0;
 };
 
-// в╟йнуъ╣дЁИоС╫с©з, в╟йнуъм╛яЫр╡©ирт╠╩в╟йнё╛кЫртм╛й╠р╡йгр╩жж╠╩в╟йнуъё╛кЫрт╪лЁпComponent╫с©зюЮ
+// Хё┘И╔╟Х─┘Г └Ф┼╫Х╠║Ф▌╔Е▐ё, Хё┘И╔╟Х─┘Е░▄Ф═╥Д╧÷Е▐╞Д╩╔Х╒╚Хё┘И╔╟О╪▄Ф┴─Д╩╔Е░▄Ф≈╤Д╧÷Ф≤╞Д╦─Г╖█Х╒╚Хё┘И╔╟Х─┘О╪▄Ф┴─Д╩╔Г╩╖Ф┴©ComponentФ▌╔Е▐ёГ╠╩
 class IDecorator : public IComponent {
 public:
 	IDecorator(IComponent *p_component) : m_component_ptr(p_component) { }
@@ -20,7 +20,7 @@ protected:
 	IComponent *m_component_ptr;
 };
 
-// вНт╜й╪╣д╠╩в╟йнуъё╛ж╩лА╧╘р╩оН╨кпд╧╕дэё╛ц╩сп╦╫╪с╧╕дэ
+// Ф°─Е▌÷Е╖▀Г └Х╒╚Хё┘И╔╟Х─┘О╪▄Е▐╙Ф▐░Д╬⌡Д╦─И║╧Ф═╦Е©┐Е┼÷Х┐╫О╪▄Ф╡║Ф°┴И≥└Е┼═Е┼÷Х┐╫
 class CConcreteComponent : public IComponent {
 public:
 	CConcreteComponent() { }
@@ -28,31 +28,31 @@ public:
 	void operation();
 };
 
-// в╟йнуъй╣ожюЮ1
+// Хё┘И╔╟Х─┘Е╝·Г▌╟Г╠╩1
 class CConcreteDecorator1 : public IDecorator {
 public:
 	CConcreteDecorator1(IComponent *p_component) : IDecorator(p_component) { }
 	~CConcreteDecorator1() { }
-	void operation();			// в╟йнуъ╣дппн╙ё╛╤╞л╛╣Всц╠╩в╟йнуъ╣дппн╙,м╛й╠сжлА╧╘╦Ь╠П╣дв╟йнуъ╣Всц
-	void add_operation();		// в╟йнуъ╣д╦╫╪сппн╙ё╛╨м╠╩в╟йнуъ╣дппн╙р╩фП╧╧Ёи╣╠г╟в╟йнуъ╣дппн╙
+	void operation();			// Хё┘И╔╟Х─┘Г └Х║▄Д╦╨О╪▄Е┼╗Ф─│Х╟┐Г■╗Х╒╚Хё┘И╔╟Х─┘Г └Х║▄Д╦╨,Е░▄Ф≈╤Е▐┬Ф▐░Д╬⌡Г╩≥Е┬╚Г └Хё┘И╔╟Х─┘Х╟┐Г■╗
+	void add_operation();		// Хё┘И╔╟Х─┘Г └И≥└Е┼═Х║▄Д╦╨О╪▄Е▓▄Х╒╚Хё┘И╔╟Х─┘Г └Х║▄Д╦╨Д╦─Х╣╥Ф·└Ф┬░Е╫⌠Е┴█Хё┘И╔╟Х─┘Г └Х║▄Д╦╨
 };
 
-// в╟йнуъй╣ожюЮ2
+// Хё┘И╔╟Х─┘Е╝·Г▌╟Г╠╩2
 class CConcreteDecorator2 : public IDecorator {
 public:
 	CConcreteDecorator2(IComponent *p_component) : IDecorator(p_component) { }
 	~CConcreteDecorator2() { }
-	void operation();			// в╟йнуъ╣дппн╙ё╛╤╞л╛╣Всц╠╩в╟йнуъ╣дппн╙,м╛й╠сжлА╧╘╦Ь╠П╣дв╟йнуъ╣Всц
-	void add_operation();		// в╟йнуъ╣д╦╫╪сппн╙ё╛╨м╠╩в╟йнуъ╣дппн╙р╩фП╧╧Ёи╣╠г╟в╟йнуъ╣дппн╙
+	void operation();			// Хё┘И╔╟Х─┘Г └Х║▄Д╦╨О╪▄Е┼╗Ф─│Х╟┐Г■╗Х╒╚Хё┘И╔╟Х─┘Г └Х║▄Д╦╨,Е░▄Ф≈╤Е▐┬Ф▐░Д╬⌡Г╩≥Е┬╚Г └Хё┘И╔╟Х─┘Х╟┐Г■╗
+	void add_operation();		// Хё┘И╔╟Х─┘Г └И≥└Е┼═Х║▄Д╦╨О╪▄Е▓▄Х╒╚Хё┘И╔╟Х─┘Г └Х║▄Д╦╨Д╦─Х╣╥Ф·└Ф┬░Е╫⌠Е┴█Хё┘И╔╟Х─┘Г └Х║▄Д╦╨
 };
 
-// в╟йнуъй╣ожюЮ3
+// Хё┘И╔╟Х─┘Е╝·Г▌╟Г╠╩3
 class CConcreteDecorator3 : public IDecorator {
 public:
 	CConcreteDecorator3(IComponent *p_component) : IDecorator(p_component) { }
 	~CConcreteDecorator3() { }
-	void operation();			// в╟йнуъ╣дппн╙ё╛╤╞л╛╣Всц╠╩в╟йнуъ╣дппн╙,м╛й╠сжлА╧╘╦Ь╠П╣дв╟йнуъ╣Всц
-	void add_operation();		// в╟йнуъ╣д╦╫╪сппн╙ё╛╨м╠╩в╟йнуъ╣дппн╙р╩фП╧╧Ёи╣╠г╟в╟йнуъ╣дппн╙
+	void operation();			// Хё┘И╔╟Х─┘Г └Х║▄Д╦╨О╪▄Е┼╗Ф─│Х╟┐Г■╗Х╒╚Хё┘И╔╟Х─┘Г └Х║▄Д╦╨,Е░▄Ф≈╤Е▐┬Ф▐░Д╬⌡Г╩≥Е┬╚Г └Хё┘И╔╟Х─┘Х╟┐Г■╗
+	void add_operation();		// Хё┘И╔╟Х─┘Г └И≥└Е┼═Х║▄Д╦╨О╪▄Е▓▄Х╒╚Хё┘И╔╟Х─┘Г └Х║▄Д╦╨Д╦─Х╣╥Ф·└Ф┬░Е╫⌠Е┴█Хё┘И╔╟Х─┘Г └Х║▄Д╦╨
 };
 
 #endif
