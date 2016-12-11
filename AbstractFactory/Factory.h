@@ -5,13 +5,17 @@
 #include <iostream>
 using namespace std;
 
+// 抽象工厂的接口类
 class IFactory {
 public:
     IFactory() {}
     virtual ~IFactory() {}
+
+    // 创建相互关联的一系列类的抽象接口，由子类进行实现
     virtual IProductA* create_product_a() = 0;
     virtual IProductB* create_product_b() = 0;
 };
+
 
 class CFactory1 : public IFactory {
 public:
