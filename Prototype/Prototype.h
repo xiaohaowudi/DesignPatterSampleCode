@@ -12,6 +12,9 @@ public:
 
 	// 原型抽象类中规定每个子类必须实现clone接口
 	virtual IPrototype* clone() = 0;
+
+	// 子类实现的具体的功能方法
+	virtual void operation() = 0;
 };
 
 // 原型实现类1
@@ -24,6 +27,7 @@ public:
 		cout << "CPrototype1::CPrototype1" << endl;
 	}
 
+	// 拷贝构造函数，clone时使用
 	CPrototype1(const CPrototype1& prototype) {
 		this->item = prototype.item;
 	}
@@ -33,7 +37,7 @@ public:
 	}
 
 	IPrototype* clone();
-	void show();
+	void operation();
 };
 
 // 原型实现类1
@@ -55,7 +59,7 @@ public:
 	}
 
 	IPrototype* clone();
-	void show();
+	void operation();
 };
 
 #endif

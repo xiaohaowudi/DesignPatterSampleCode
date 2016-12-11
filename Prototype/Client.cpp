@@ -11,8 +11,8 @@ int main(void) {
 	delete p_prototype1;
 	delete p_prototype2;
 
-	dynamic_cast<CPrototype1*>(p_prototype_clone1)->show();
-	dynamic_cast<CPrototype2*>(p_prototype_clone2)->show();
+	p_prototype_clone1->operation();
+	p_prototype_clone2->operation();
 
 	delete p_prototype_clone1;
 	delete p_prototype_clone2;

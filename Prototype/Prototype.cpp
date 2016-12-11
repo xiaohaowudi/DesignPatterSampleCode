@@ -7,7 +7,7 @@ IPrototype* CPrototype1::clone() {
 	return p_prototype_tmp;
 }
 
-void CPrototype1::show() {
+void CPrototype1::operation() {
 	cout << "CPrototype1.item = " << item << endl;
 }
 
@@ -16,6 +16,6 @@ IPrototype* CPrototype2::clone() {
 	return p_prototype_tmp;
 }
 
-void CPrototype2::show() {
+void CPrototype2::operation() {
 	cout << "CPrototype2.item = " << item << endl;
 }
