@@ -7,16 +7,16 @@ using namespace std;
 
 class IFlyWeight {
 public:
-	// ×ÓÀàÊµÏÖµÄ¾ßÌå¹¦ÄÜ
+	// å­ç±»å®ç°çš„å…·ä½“åŠŸèƒ½
 	virtual void operation() = 0;
 
-	// »ñÈ¡key
+	// è·å–key
 	unsigned int get_key() { return m_key; }
 
 	virtual ~IFlyWeight() { }
 
 protected:
-	// ¹¹Ôìº¯ÊıÍâ²¿²»ÄÜµ÷ÓÃ£¬Ö»ÄÜÍ¨¹ı¹¤³§»ñÈ¡¶ÔÏó£¬µ«ÊÇ×ÓÀà¿ÉÒÔµ÷ÓÃ
+	// æ„é€ å‡½æ•°å¤–éƒ¨ä¸èƒ½è°ƒç”¨ï¼Œåªèƒ½é€šè¿‡å·¥å‚è·å–å¯¹è±¡ï¼Œä½†æ˜¯å­ç±»å¯ä»¥è°ƒç”¨
 	IFlyWeight(unsigned int key) : m_key(key) { }
 	unsigned int m_key;
 };
@@ -35,11 +35,11 @@ public:
 	FlyWeightFactory();
 	virtual ~FlyWeightFactory();
 
-	// »ñÈ¡flyweight¶ÔÏó
+	// è·å–flyweightå¯¹è±¡
 	IFlyWeight* get_flyweight(unsigned int key);
 
 private:
-	// ¶ÔÏó³Ø
+	// å¯¹è±¡æ± 
 	map<unsigned int, IFlyWeight*> m_flyweight_pool;
 };
 
